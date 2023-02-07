@@ -34,12 +34,12 @@ class FrameStackingEnv:
         state, reward, done, info = self.env.step(action)
         self.frames[1:self.n, :, :] = self.frames[:self.n-1, :, :]
         self.frames[0, :, :] = self._preprocess_frame(state)
-        self.frame = self._preprocess_frame(state)
+        self.frame = state
         return self.frames.copy(), reward, done, info
 
     def reset(self):
         observation = self.env.reset()
-        self.frame = self._preprocess_frame(observation)
+        self.frame = observation
         self.frames = np.stack([self._preprocess_frame(observation)]*self.n)
         return self.frames.copy()
 

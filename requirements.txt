@@ -4,8 +4,5 @@ gym
 ipdb
 wandb
 opencv-python
-
-
-
-
-
+moviepy
+imageio
