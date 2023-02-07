@@ -53,9 +53,9 @@ def update_target_model(m: nn.Module, tgt: nn.Module):
 def train_step(model, tgt, state_transitions, n_actions, device, gamma=0.99):
     curr_states = torch.stack([torch.tensor(s.state, dtype=torch.float32) for s in state_transitions]).to(device)
     rewards = torch.stack([torch.tensor(s.reward, dtype=torch.float32) for s in state_transitions]).to(device)
-    mask = torch.stack([torch.tensor(1) if not s.done else torch.Tensor(0) for s in state_transitions]).to(device)
+    mask = torch.stack([torch.tensor(0, dtype=torch.float32) if s.done else torch.tensor(1, dtype=torch.float32) for s in state_transitions]).to(device)
     next_states = torch.stack([torch.tensor(s.state, dtype=torch.float32) for s in state_transitions]).to(device)
-    actions = [s.action for s in state_transitions]
+    actions = torch.LongTensor([s.action for s in state_transitions]).to(device)
 
 
     model.optimizer.zero_grad()
@@ -68,6 +68,8 @@ def train_step(model, tgt, state_transitions, n_actions, device, gamma=0.99):
     # So, to do this, we take the one hot encoded version and then calculate them.
 
     loss = ((rewards + gamma*q_values_next*mask - torch.sum(F.one_hot(actions)*q_values_curr, axis=-1))**2).mean()
+
+    # ipdb.set_trace()
 
     loss.backward()
 
@@ -104,7 +106,7 @@ def main():
     env = gym.make("Breakout-v4")
     env = FrameStackingEnv(env=env, w=84, h=84, n=4)
 
-    device = torch.device("cuda" if torch.has_cuda else "mps" if torch.has_mps else "cpu")
+    device = torch.device("cuda" if torch.has_cuda else "cpu")
 
     hparams = {
         'sample_size': 32,
@@ -120,16 +122,18 @@ def main():
         'eps': 1,
         'eps_min': 0.001,
         'eps_decay': 0.99995,
+        'test_every': 3000,
     }
 
     pbar = tqdm()
 
-    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n).to(device)
-    tgt = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n).to(device)
+    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device)
+    tgt = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device)
     update_target_model(m, tgt)
 
     replay_buffer = ReplayBuffer()
     step_num = 0
+    test_until = 0
 
     last_obs = env.reset()
 
@@ -158,6 +162,7 @@ def main():
         step_num += 1
         hparams['steps_until_train'] += 1
         hparams['steps_until_update'] += 1
+        test_until += 1
 
         if replay_buffer.idx >= hparams['min_rb_size'] and hparams['steps_until_train'] >= hparams['steps_to_train']:
             state_transitions = replay_buffer.sample(hparams['sample_size'])
@@ -166,20 +171,23 @@ def main():
                 'loss': loss.item(),
                 'epsilon': eps,
                 'avg_rewards': np.mean(episode_rewards),
-                'episode_rewards': episode_rewards[-1],
-            }, step_num=step_num)
+                'rolling_rewards': rolling_rewards,
+            }, step=step_num)
             hparams['steps_until_train'] = 0
 
         if hparams['steps_until_update'] >= hparams['steps_to_update']:
             update_target_model(m, tgt)
             hparams['steps_until_update'] = 0
 
+
+        if test_until >= hparams['test_every']:
             test_rewards, frames = test_step(m, device)
 
             wandb.log({
                 'test_rewards': test_rewards,
                 'test_video': wandb.Video(frames.transpose(0, 3, 1, 2), str(test_rewards), fps=25, format='mp4')
-            })
+            }, step=step_num)
+            test_step = 0
 
 
     # ipdb.set_trace()

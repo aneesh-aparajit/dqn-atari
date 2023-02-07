@@ -18,7 +18,7 @@ class Conv(nn.Module):
 
 
 class DQNModel(nn.Module):
-    def __init__(self, obs_shape: tuple, n_actions: int, window_size: int = 4, lr: float = 1e-4):
+    def __init__(self, obs_shape: tuple, n_actions: int, device, window_size: int = 4, lr: float = 1e-4):
         assert len(obs_shape) == 3, "The observation shape between a gray scale or a rgb image."
         super(DQNModel, self).__init__()
         self.obs_shape = obs_shape
@@ -32,6 +32,9 @@ class DQNModel(nn.Module):
         )
 
         self.fc = nn.Linear(in_features=1568, out_features=self.n_actions)
+        self.to(device)
+        self.optimizer = optim.Adam(self.parameters(), lr=lr)
+        self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=32, gamma=0.3)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         x = self.net(x)
