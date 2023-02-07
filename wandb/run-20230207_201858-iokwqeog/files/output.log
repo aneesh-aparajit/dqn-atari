@@ -1,0 +1,436 @@
+
+796it [00:00, 2592.82it/s]
+[Target] model weights  updated...
+[Target] model weights  updated...
+
+
+
+
+
+1434it [00:20, 38.26it/s]
+
+
+
+
+
+
+
+
+
+
+
+1977it [00:45, 24.17it/s]
+
+
+
+
+
+
+
+
+
+
+
+2473it [01:08, 25.44it/s]
+
+
+
+
+
+
+
+
+
+
+
+2945it [01:29, 25.30it/s]
+
+
+
+
+
+
+
+
+
+
+
+3477it [01:54, 25.21it/s]
+
+
+
+
+
+
+
+
+
+
+
+3977it [02:16, 26.23it/s]
+
+
+
+
+
+
+
+
+
+
+
+4465it [02:38, 23.88it/s]
+
+
+
+
+
+
+
+
+
+
+
+4969it [03:02, 24.82it/s]
+
+
+
+
+
+
+
+
+
+
+
+5497it [03:26, 25.45it/s]
+
+
+
+
+
+
+
+
+
+
+5997it [03:48, 25.95it/s]
+
+
+
+
+
+
+
+
+
+
+6473it [04:10, 25.12it/s]
+
+
+
+
+
+
+
+
+
+
+
+6957it [04:32, 25.30it/s]
+
+
+
+
+
+
+
+
+
+
+
+7473it [04:56, 25.63it/s]
+
+
+
+
+
+
+
+
+
+
+
+7957it [05:18, 25.74it/s]
+
+
+
+
+
+
+
+
+
+
+
+8481it [05:42, 24.65it/s]
+
+
+
+
+
+
+
+
+
+
+
+8953it [06:04, 24.41it/s]
+
+
+
+
+
+
+
+
+
+
+
+9469it [06:28, 25.14it/s]
+
+
+
+
+
+
+
+
+
+
+
+9997it [06:52, 24.26it/s]
+
+
+
+
+
+
+
+
+
+
+10457it [07:15, 25.43it/s]
+
+
+
+
+
+
+
+
+
+
+
+10981it [07:38, 25.67it/s]
+
+
+
+
+
+
+
+
+
+
+
+11477it [08:00, 23.99it/s]
+
+
+
+
+
+
+
+
+
+
+
+11965it [08:23, 25.50it/s]
+
+
+
+
+
+
+
+
+
+
+12457it [08:45, 24.22it/s]
+
+
+
+
+
+
+
+
+
+
+12957it [09:07, 26.37it/s]
+
+
+
+
+
+
+
+
+
+
+13481it [09:29, 26.78it/s]
+
+
+
+
+
+
+
+
+
+
+
+13997it [09:51, 25.04it/s]
+
+
+
+
+
+
+
+
+
+
+14497it [10:13, 24.99it/s]
+
+
+
+
+
+
+
+
+
+14953it [10:33, 26.88it/s]
+
+
+
+
+
+
+
+
+
+
+15453it [10:55, 26.84it/s]
+
+
+
+
+
+
+
+
+
+
+15961it [11:17, 27.20it/s]
+
+
+
+
+
+
+
+
+
+
+
+16473it [11:39, 24.63it/s]
+
+
+
+
+
+
+
+
+
+
+
+16997it [12:03, 26.27it/s]
+
+
+
+
+
+
+
+
+
+
+17493it [12:25, 26.11it/s]
+
+
+
+
+
+
+
+
+
+
+
+17981it [12:47, 25.50it/s]
+
+
+
+
+
+
+
+
+
+
+
+18481it [13:09, 26.76it/s]
+
+
+
+18609it [13:17, 26.57it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 169, in main
+    loss = train_step(m, tgt, state_transitions, env.env.action_space.n, device, hparams['gamma'])
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 63, in train_step
+    q_values_next = tgt.forward(next_states).max(-1)[0]
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 44, in forward
+    y = m(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 17, in forward
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

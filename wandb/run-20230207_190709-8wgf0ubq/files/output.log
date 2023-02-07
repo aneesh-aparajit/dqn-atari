@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/gym/envs/registration.py", line 150, in spec
+    return self.env_specs[id]
+KeyError: 'Pong-v5'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 106, in main
+    env = gym.make("Pong-v5")
+  File "/opt/homebrew/lib/python3.10/site-packages/gym/envs/registration.py", line 184, in make
+    return registry.make(id, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/gym/envs/registration.py", line 105, in make
+    spec = self.spec(path)
+  File "/opt/homebrew/lib/python3.10/site-packages/gym/envs/registration.py", line 161, in spec
+    raise error.DeprecatedEnv(
+gym.error.DeprecatedEnv: Env Pong-v5 not found (valid versions include ['Pong-v0', 'Pong-v4'])

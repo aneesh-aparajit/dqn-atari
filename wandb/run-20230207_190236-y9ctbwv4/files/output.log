@@ -1,0 +1,31 @@
+
+4568it [00:01, 2490.05it/s]
+[Target] model weights  updated...
+
+8853it [00:03, 2017.01it/s]
+
+12322it [00:05, 1611.03it/s]
+
+
+
+21880it [00:11, 1550.52it/s]
+
+
+27767it [00:15, 1421.70it/s]
+
+30784it [00:17, 1404.38it/s]
+
+34767it [00:21, 1182.10it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 152, in main
+    state, reward, done, _ = env.step(action)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/utils.py", line 34, in step
+    state, reward, done, info = self.env.step(action)
+  File "/opt/homebrew/lib/python3.10/site-packages/gym/wrappers/time_limit.py", line 18, in step
+    observation, reward, done, info = self.env.step(action)
+  File "/opt/homebrew/lib/python3.10/site-packages/gym/envs/atari/atari_env.py", line 134, in step
+    reward += self.ale.act(action)
+  File "/opt/homebrew/lib/python3.10/site-packages/atari_py/ale_python_interface.py", line 152, in act
+    return ale_lib.act(self.obj, int(action))
+KeyboardInterrupt

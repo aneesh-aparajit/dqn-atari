@@ -1,0 +1,100 @@
+
+[Target] model weights  updated...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4809it [00:56, 94.57it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9961it [02:14, 99.50it/s]
+
+
+
+
+
+
+
+
+
+11353it [02:36, 100.72it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 169, in main
+    loss = train_step(m, tgt, state_transitions, env.env.action_space.n, device, hparams['gamma'])
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 63, in train_step
+    q_values_next = tgt.forward(next_states).max(-1)[0]
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 40, in forward
+    x = self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 17, in forward
+    return self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/batchnorm.py", line 171, in forward
+    return F.batch_norm(
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/functional.py", line 2450, in batch_norm
+    return torch.batch_norm(
+KeyboardInterrupt

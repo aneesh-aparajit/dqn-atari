@@ -1,0 +1,10 @@
+0it [00:00, ?it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 130, in main
+    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=6)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 34, in __init__
+    nn.init.kaiming_uniform_(self.net.weight)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1601, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'Sequential' object has no attribute 'weight'

@@ -1,0 +1,66 @@
+
+1164it [00:01, 763.97it/s]
+
+
+
+
+
+
+
+
+
+
+4825it [00:27, 183.53it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9913it [01:02, 202.39it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14927it [01:35, 189.19it/s]
+
+
+
+
+
+
+
+16891it [01:53, 172.49it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 169, in main
+    loss = train_step(m, tgt, state_transitions, env.env.action_space.n, device, hparams['gamma'])
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 74, in train_step
+    loss.backward()
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

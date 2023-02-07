@@ -1,0 +1,29 @@
+1208it [00:00, 3083.15it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 150, in main
+    action = m(torch.tensor(last_obs, dtype=torch.float32).unsqueeze(0).to(device)).argmax(-1).item()
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 40, in forward
+    x = self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 17, in forward
+    return self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [16, 4, 8, 8], expected input[1, 6, 84, 84] to have 4 channels, but got 6 channels instead
+[Target] model weights  updated...

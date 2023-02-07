@@ -80,7 +80,7 @@ def train_step(model, tgt, state_transitions, n_actions, device, gamma=0.99):
 
 def test_step(model, device):
     env_test = gym.make("Breakout-v4")
-    env_test = FrameStackingEnv(env=env_test, w=84, h=84, n=4)
+    env_test = FrameStackingEnv(env=env_test, w=84, h=84, n=6)
 
     obs = env_test.reset()
     done = False
@@ -89,7 +89,7 @@ def test_step(model, device):
     game_steps = 0
     score = 0
 
-    while not done and game_steps < 1000:
+    while not done and game_steps < 2000:
         action = model.forward(torch.tensor(obs, dtype=torch.float32).unsqueeze(0).to(device)).argmax(-1).item()
         obs, reward, done, _ = env_test.step(action)
         frames.append(env_test.frame)
@@ -101,34 +101,34 @@ def test_step(model, device):
 
 def main():
 
-    wandb.init(project="dqn-breakout", name="iteration-1")
+    wandb.init(project="dqn-breakout", name="iteration-12")
 
     env = gym.make("Breakout-v4")
-    env = FrameStackingEnv(env=env, w=84, h=84, n=4)
+    env = FrameStackingEnv(env=env, w=84, h=84, n=6)
 
     device = torch.device("cuda" if torch.has_cuda else "cpu")
 
     hparams = {
-        'sample_size': 32,
-        'rb_size': 100_000,
-        'min_rb_size': 300,
+        'sample_size': 64,
+        'rb_size': 1000000,
+        'min_rb_size': 1000,
         'learning_rate': 3e-4,
-        'steps_to_train': 128,
-        'steps_to_update': 256,
+        'steps_to_train': 4,
+        'steps_to_update': 500,
         'steps_until_train': 0,
         'steps_until_update': 0,
-        'gamma': 0.999,
+        'gamma': 0.80,
         'step_num': 0,
         'eps': 1,
         'eps_min': 0.001,
-        'eps_decay': 0.99995,
-        'test_every': 3000,
+        'eps_decay': 0.9999,
+        'test_every': 500,
     }
 
     pbar = tqdm()
 
-    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device)
-    tgt = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device)
+    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=6)
+    tgt = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=6)
     update_target_model(m, tgt)
 
     replay_buffer = ReplayBuffer()
@@ -180,14 +180,14 @@ def main():
             hparams['steps_until_update'] = 0
 
 
-        if test_until >= hparams['test_every']:
+        if replay_buffer.idx >= hparams['min_rb_size'] and test_until >= hparams['test_every']:
             test_rewards, frames = test_step(m, device)
 
             wandb.log({
                 'test_rewards': test_rewards,
                 'test_video': wandb.Video(frames.transpose(0, 3, 1, 2), str(test_rewards), fps=25, format='mp4')
             }, step=step_num)
-            test_step = 0
+            test_until = 0
 
 
     # ipdb.set_trace()

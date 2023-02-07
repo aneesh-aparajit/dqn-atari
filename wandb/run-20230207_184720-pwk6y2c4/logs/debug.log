@@ -1,0 +1,25 @@
+2023-02-07 18:47:20,793 INFO    MainThread:56718 [wandb_setup.py:_flush():68] Configure stats pid to 56718
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_setup.py:_flush():68] Loading settings from /Users/aneeshaparajit/.config/wandb/settings
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_setup.py:_flush():68] Loading settings from /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/settings
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'agent.py', 'program': '/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py'}
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_init.py:_log_setup():478] Logging user logs to /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_184720-pwk6y2c4/logs/debug.log
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_init.py:_log_setup():479] Logging internal logs to /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_184720-pwk6y2c4/logs/debug-internal.log
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_init.py:init():518] calling init triggers
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_init.py:init():521] wandb.init called with sweep_config: {}
+config: {}
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_init.py:init():571] starting backend
+2023-02-07 18:47:20,794 INFO    MainThread:56718 [wandb_init.py:init():575] setting up manager
+2023-02-07 18:47:20,805 INFO    MainThread:56718 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-02-07 18:47:20,807 INFO    MainThread:56718 [wandb_init.py:init():582] backend started and connected
+2023-02-07 18:47:20,810 INFO    MainThread:56718 [wandb_init.py:init():670] updated telemetry
+2023-02-07 18:47:20,828 INFO    MainThread:56718 [wandb_init.py:init():710] communicating run to backend with 60.0 second timeout
+2023-02-07 18:47:21,616 INFO    MainThread:56718 [wandb_run.py:_on_init():2121] communicating current version
+2023-02-07 18:47:22,606 INFO    MainThread:56718 [wandb_run.py:_on_init():2125] got version response 
+2023-02-07 18:47:22,606 INFO    MainThread:56718 [wandb_init.py:init():758] starting run threads in backend
+2023-02-07 18:47:22,673 INFO    MainThread:56718 [wandb_run.py:_console_start():2101] atexit reg
+2023-02-07 18:47:22,674 INFO    MainThread:56718 [wandb_run.py:_redirect():1959] redirect: SettingsConsole.WRAP_RAW
+2023-02-07 18:47:22,674 INFO    MainThread:56718 [wandb_run.py:_redirect():2024] Wrapping output streams.
+2023-02-07 18:47:22,674 INFO    MainThread:56718 [wandb_run.py:_redirect():2046] Redirects installed.
+2023-02-07 18:47:22,676 INFO    MainThread:56718 [wandb_init.py:init():798] run started, returning control to user process
+2023-02-07 18:49:00,463 WARNING MsgRouterThr:56718 [router.py:message_loop():77] message_loop has been closed

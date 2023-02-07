@@ -1,0 +1,51 @@
+
+1837it [00:01, 932.63it/s]
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+[Target] model weights  updated...
+
+
+3000it [00:20, 857.06it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 188, in main
+    'test_video': wandb.Video(frames.transpose(0, 3, 1, 2), str(test_rewards), fps=25, format='mp4')
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/data_types/video.py", line 127, in __init__
+    self.encode()
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/data_types/video.py", line 150, in encode
+    clip.write_videofile(filename, **kwargs)
+  File "<decorator-gen-74>", line 2, in write_videofile
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 54, in requires_duration
+    return f(clip, *a, **k)
+  File "<decorator-gen-73>", line 2, in write_videofile
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 135, in use_clip_fps_by_default
+    return f(clip, *new_a, **new_kw)
+  File "<decorator-gen-72>", line 2, in write_videofile
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 22, in convert_masks_to_RGB
+    return f(clip, *a, **k)
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/VideoClip.py", line 300, in write_videofile
+    ffmpeg_write_video(self, filename, fps, codec,
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/io/ffmpeg_writer.py", line 220, in ffmpeg_write_video
+    for t,frame in clip.iter_frames(logger=logger, with_times=True,
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/Clip.py", line 472, in iter_frames
+    frame = self.get_frame(t)
+  File "<decorator-gen-30>", line 2, in get_frame
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 89, in wrapper
+    return f(*new_a, **new_kw)
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/Clip.py", line 93, in get_frame
+    return self.make_frame(t)
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/io/ImageSequenceClip.py", line 148, in make_frame
+    index = find_image_index(t)
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/io/ImageSequenceClip.py", line 106, in find_image_index
+    return max([i for i in range(len(self.sequence))
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/io/ImageSequenceClip.py", line 107, in <listcomp>
+    if self.images_starts[i]<=t])
+KeyboardInterrupt

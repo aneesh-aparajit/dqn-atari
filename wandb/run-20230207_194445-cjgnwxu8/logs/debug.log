@@ -1,0 +1,33 @@
+2023-02-07 19:44:45,707 INFO    MainThread:60032 [wandb_setup.py:_flush():68] Configure stats pid to 60032
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_setup.py:_flush():68] Loading settings from /Users/aneeshaparajit/.config/wandb/settings
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_setup.py:_flush():68] Loading settings from /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/settings
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'agent.py', 'program': '/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py'}
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_init.py:_log_setup():478] Logging user logs to /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/logs/debug.log
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_init.py:_log_setup():479] Logging internal logs to /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/logs/debug-internal.log
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_init.py:init():518] calling init triggers
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_init.py:init():521] wandb.init called with sweep_config: {}
+config: {}
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_init.py:init():571] starting backend
+2023-02-07 19:44:45,708 INFO    MainThread:60032 [wandb_init.py:init():575] setting up manager
+2023-02-07 19:44:45,721 INFO    MainThread:60032 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-02-07 19:44:45,724 INFO    MainThread:60032 [wandb_init.py:init():582] backend started and connected
+2023-02-07 19:44:45,727 INFO    MainThread:60032 [wandb_init.py:init():670] updated telemetry
+2023-02-07 19:44:45,744 INFO    MainThread:60032 [wandb_init.py:init():710] communicating run to backend with 60.0 second timeout
+2023-02-07 19:44:45,857 WARNING MainThread:60032 [wandb_init.py:init():1129] interrupted
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1108, in init
+    run = wi.init()
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 713, in init
+    result = run_init_handle.wait(
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 273, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 120, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/lib/mailbox.py", line 116, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.9/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.9/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

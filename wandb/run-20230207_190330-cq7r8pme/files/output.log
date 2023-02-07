@@ -1,0 +1,81 @@
+
+1178it [00:01, 785.46it/s]
+
+
+
+
+
+
+
+
+
+
+
+5225it [00:25, 246.40it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+9929it [00:54, 234.13it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+14841it [01:23, 225.24it/s]
+
+
+
+
+
+
+
+
+
+
+
+18681it [01:48, 227.41it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 169, in main
+    loss = train_step(m, tgt, state_transitions, env.env.action_space.n, device, hparams['gamma'])
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 65, in train_step
+    q_values_curr = model.forward(curr_states)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 40, in forward
+    x = self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 17, in forward
+    return self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt

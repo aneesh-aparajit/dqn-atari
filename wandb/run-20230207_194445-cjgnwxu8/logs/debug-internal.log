@@ -1,0 +1,17 @@
+2023-02-07 19:44:45,759 INFO    StreamThr :60042 [internal.py:wandb_internal():87] W&B internal server running at pid: 60042, started at: 2023-02-07 19:44:45.759527
+2023-02-07 19:44:45,760 DEBUG   HandlerThread:60042 [handler.py:handle_request():144] handle_request: status
+2023-02-07 19:44:45,760 INFO    WriterThread:60042 [datastore.py:open_for_write():85] open: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/run-cjgnwxu8.wandb
+2023-02-07 19:44:45,762 DEBUG   SenderThread:60042 [sender.py:send():334] send: header
+2023-02-07 19:44:45,762 DEBUG   SenderThread:60042 [sender.py:send():334] send: run
+2023-02-07 19:44:45,862 DEBUG   HandlerThread:60042 [handler.py:handle_request():144] handle_request: shutdown
+2023-02-07 19:44:45,862 INFO    HandlerThread:60042 [handler.py:finish():841] shutting down handler
+2023-02-07 19:44:46,766 INFO    WriterThread:60042 [datastore.py:close():299] close: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/run-cjgnwxu8.wandb
+2023-02-07 19:44:47,537 INFO    SenderThread:60042 [dir_watcher.py:__init__():216] watching files in: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/files
+2023-02-07 19:44:47,537 INFO    SenderThread:60042 [sender.py:_start_run_threads():1065] run started: cjgnwxu8 with start time 1675779285.724326
+2023-02-07 19:44:47,537 INFO    SenderThread:60042 [sender.py:finish():1491] shutting down sender
+2023-02-07 19:44:47,538 INFO    SenderThread:60042 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-02-07 19:44:48,544 INFO    SenderThread:60042 [dir_watcher.py:finish():392] scan: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/files
+2023-02-07 19:44:48,544 INFO    SenderThread:60042 [dir_watcher.py:finish():406] scan save: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/files/config.yaml config.yaml
+2023-02-07 19:44:48,545 INFO    SenderThread:60042 [file_pusher.py:finish():160] shutting down file pusher
+2023-02-07 19:44:48,545 INFO    SenderThread:60042 [file_pusher.py:join():165] waiting for file pusher
+2023-02-07 19:44:49,697 INFO    Thread-15 :60042 [upload_job.py:push():143] Uploaded file /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_194445-cjgnwxu8/files/config.yaml

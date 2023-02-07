@@ -1,0 +1,1 @@
+{"loss": 0.2665049433708191, "epsilon": 0.9512757992150065, "avg_rewards": 1.25, "rolling_rewards": 0.0, "_timestamp": 1675777808.244894, "_runtime": 3.047070026397705, "_step": 1000, "_wandb": {"runtime": 0}}

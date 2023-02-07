@@ -1,0 +1,10 @@
+976it [00:00, 1135.09it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 169, in main
+    loss = train_step(m, tgt, state_transitions, env.env.action_space.n, device, hparams['gamma'])
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 70, in train_step
+    loss = loss_fn((rewards + gamma*q_values_next*mask), torch.sum(F.one_hot(actions)*q_values_curr, axis=-1))
+RuntimeError: The size of tensor a (3) must match the size of tensor b (4) at non-singleton dimension 1
+[Target] model weights  updated...
+[Target] model weights  updated...

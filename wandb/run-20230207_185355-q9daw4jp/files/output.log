@@ -1,0 +1,56 @@
+
+1865it [00:01, 913.17it/s]
+
+5815it [00:03, 2383.62it/s]
+
+10293it [00:05, 2474.52it/s]
+
+
+17829it [00:09, 2489.81it/s]
+
+21445it [00:11, 1772.77it/s]
+
+25493it [00:13, 2500.32it/s]
+
+
+33001it [00:17, 1451.54it/s]
+
+37343it [00:19, 2563.33it/s]
+
+40910it [00:21, 1724.10it/s]
+
+44936it [00:23, 2325.70it/s]
+
+
+50169it [00:27, 756.89it/s]
+
+
+
+
+
+
+52481it [00:39, 239.63it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 188, in main
+    'test_video': wandb.Video(frames.transpose(0, 3, 1, 2), str(test_rewards), fps=25, format='mp4')
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/data_types/video.py", line 127, in __init__
+    self.encode()
+  File "/opt/homebrew/lib/python3.10/site-packages/wandb/sdk/data_types/video.py", line 150, in encode
+    clip.write_videofile(filename, **kwargs)
+  File "<decorator-gen-74>", line 2, in write_videofile
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 54, in requires_duration
+    return f(clip, *a, **k)
+  File "<decorator-gen-73>", line 2, in write_videofile
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 135, in use_clip_fps_by_default
+    return f(clip, *new_a, **new_kw)
+  File "<decorator-gen-72>", line 2, in write_videofile
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/decorators.py", line 22, in convert_masks_to_RGB
+    return f(clip, *a, **k)
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/VideoClip.py", line 300, in write_videofile
+    ffmpeg_write_video(self, filename, fps, codec,
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/io/ffmpeg_writer.py", line 228, in ffmpeg_write_video
+    writer.write_frame(frame)
+  File "/opt/homebrew/lib/python3.10/site-packages/moviepy/video/io/ffmpeg_writer.py", line 136, in write_frame
+    self.proc.stdin.write(img_array.tobytes())
+KeyboardInterrupt

@@ -1,0 +1,23 @@
+736it [00:00, 3714.40it/s]/opt/homebrew/lib/python3.10/site-packages/numpy/core/fromnumeric.py:3464: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/opt/homebrew/lib/python3.10/site-packages/numpy/core/_methods.py:192: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+1108it [00:00, 1237.03it/s]
+
+
+
+
+
+
+
+
+
+
+4697it [00:22, 154.64it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 169, in main
+    loss = train_step(m, tgt, state_transitions, env.env.action_space.n, device, hparams['gamma'])
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 70, in train_step
+    loss = ((rewards + gamma*q_values_next*mask - torch.sum(F.one_hot(actions)*q_values_curr, axis=-1))**2).mean()
+RuntimeError: The size of tensor a (5) must match the size of tensor b (6) at non-singleton dimension 1

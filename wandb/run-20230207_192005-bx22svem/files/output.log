@@ -1,0 +1,29 @@
+857it [00:00, 2797.35it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 184, in main
+    test_rewards, frames = test_step(m, device)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 93, in test_step
+    action = model.forward(torch.tensor(obs, dtype=torch.float32).unsqueeze(0).to(device)).argmax(-1).item()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 40, in forward
+    x = self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 17, in forward
+    return self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [32, 6, 8, 8], expected input[1, 4, 84, 84] to have 6 channels, but got 4 channels instead
+[Target] model weights  updated...

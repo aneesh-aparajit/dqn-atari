@@ -1,0 +1,137 @@
+
+856it [00:00, 2678.19it/s]
+[Target] model weights  updated...
+[Target] model weights  updated...
+
+
+
+
+1469it [00:20, 42.08it/s]
+
+
+
+
+
+
+
+
+
+1973it [00:42, 26.78it/s]
+
+
+
+
+
+
+
+
+
+
+2449it [01:02, 27.31it/s]
+
+
+
+
+
+
+
+
+
+
+2973it [01:24, 26.35it/s]
+
+
+
+
+
+
+
+
+
+
+
+3473it [01:46, 26.04it/s]
+
+
+
+
+
+
+
+
+
+
+
+3981it [02:08, 24.92it/s]
+
+
+
+
+
+
+
+
+
+
+
+4477it [02:30, 27.17it/s]
+
+
+
+
+
+
+
+
+
+
+
+4985it [02:52, 26.61it/s]
+
+
+
+
+
+
+
+
+
+
+
+5497it [03:14, 27.90it/s]
+
+
+
+
+
+
+
+
+5929it [03:33, 26.79it/s]Traceback (most recent call last):
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 197, in <module>
+    main()
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py", line 150, in main
+    action = m(torch.tensor(last_obs, dtype=torch.float32).unsqueeze(0).to(device)).argmax(-1).item()
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 44, in forward
+    x = self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/model.py", line 17, in forward
+    return self.net(x)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/container.py", line 217, in forward
+    input = module(input)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1488, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/opt/homebrew/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
