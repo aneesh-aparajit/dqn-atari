@@ -74,13 +74,12 @@ def train_step(model, tgt, state_transitions, n_actions, device, gamma=0.99):
     loss.backward()
 
     model.optimizer.step()
-    model.scheduler.step()
 
     return loss
 
 def test_step(model, device):
     env_test = gym.make("Breakout-v4")
-    env_test = FrameStackingEnv(env=env_test, w=84, h=84, n=6)
+    env_test = FrameStackingEnv(env=env_test, w=84, h=84, n=4)
 
     obs = env_test.reset()
     done = False
@@ -104,7 +103,7 @@ def main():
     wandb.init(project="dqn-breakout", name="iteration-12")
 
     env = gym.make("Breakout-v4")
-    env = FrameStackingEnv(env=env, w=84, h=84, n=6)
+    env = FrameStackingEnv(env=env, w=84, h=84, n=4)
 
     device = torch.device("cuda" if torch.has_cuda else "cpu")
 
@@ -127,8 +126,8 @@ def main():
 
     pbar = tqdm()
 
-    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=6)
-    tgt = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=6)
+    m = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=4)
+    tgt = DQNModel(obs_shape=env.env.observation_space.shape, n_actions=env.env.action_space.n, device=device, window_size=4)
     update_target_model(m, tgt)
 
     replay_buffer = ReplayBuffer()

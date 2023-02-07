@@ -1,0 +1,173 @@
+2023-02-07 20:35:54,542 INFO    StreamThr :61549 [internal.py:wandb_internal():87] W&B internal server running at pid: 61549, started at: 2023-02-07 20:35:54.542531
+2023-02-07 20:35:54,543 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: status
+2023-02-07 20:35:54,543 INFO    WriterThread:61549 [datastore.py:open_for_write():85] open: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/run-58wqme46.wandb
+2023-02-07 20:35:54,545 DEBUG   SenderThread:61549 [sender.py:send():334] send: header
+2023-02-07 20:35:54,545 DEBUG   SenderThread:61549 [sender.py:send():334] send: run
+2023-02-07 20:35:55,310 INFO    SenderThread:61549 [dir_watcher.py:__init__():216] watching files in: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files
+2023-02-07 20:35:55,310 INFO    SenderThread:61549 [sender.py:_start_run_threads():1065] run started: 58wqme46 with start time 1675782354.504803
+2023-02-07 20:35:55,310 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: summary_record
+2023-02-07 20:35:55,311 INFO    SenderThread:61549 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-02-07 20:35:55,314 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: check_version
+2023-02-07 20:35:55,314 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: check_version
+2023-02-07 20:35:56,320 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/wandb-summary.json
+2023-02-07 20:35:56,463 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: run_start
+2023-02-07 20:35:56,477 DEBUG   HandlerThread:61549 [system_info.py:__init__():31] System info init
+2023-02-07 20:35:56,477 DEBUG   HandlerThread:61549 [system_info.py:__init__():46] System info init done
+2023-02-07 20:35:56,477 INFO    HandlerThread:61549 [system_monitor.py:start():151] Starting system monitor
+2023-02-07 20:35:56,477 INFO    SystemMonitor:61549 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-02-07 20:35:56,477 INFO    HandlerThread:61549 [system_monitor.py:probe():172] Collecting system info
+2023-02-07 20:35:56,478 DEBUG   HandlerThread:61549 [system_info.py:probe():195] Probing system
+2023-02-07 20:35:56,478 INFO    SystemMonitor:61549 [interfaces.py:start():168] Started cpu
+2023-02-07 20:35:56,478 INFO    SystemMonitor:61549 [interfaces.py:start():168] Started disk
+2023-02-07 20:35:56,480 INFO    SystemMonitor:61549 [interfaces.py:start():168] Started gpuapple
+2023-02-07 20:35:56,482 INFO    SystemMonitor:61549 [interfaces.py:start():168] Started memory
+2023-02-07 20:35:56,482 INFO    SystemMonitor:61549 [interfaces.py:start():168] Started network
+2023-02-07 20:35:56,486 DEBUG   HandlerThread:61549 [system_info.py:_probe_git():180] Probing git
+2023-02-07 20:35:56,501 DEBUG   HandlerThread:61549 [system_info.py:_probe_git():188] Probing git done
+2023-02-07 20:35:56,501 DEBUG   HandlerThread:61549 [system_info.py:probe():241] Probing system done
+2023-02-07 20:35:56,502 DEBUG   HandlerThread:61549 [system_monitor.py:probe():181] {'os': 'macOS-13.0-arm64-arm-64bit', 'python': '3.10.9', 'heartbeatAt': '2023-02-07T15:05:56.478352', 'startedAt': '2023-02-07T15:05:54.486439', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py', 'codePath': 'agent.py', 'git': {'remote': 'https://github.com/aneesh-aparajit/dqn-atari.git', 'commit': '9f3e6113c746f2a53e50e9261ca2f73f168fefd8'}, 'email': 'aneeshaparajit.g2002@gmail.com', 'root': '/Users/aneeshaparajit/Desktop/new workspace/dqn-atari', 'host': 'Aneesh.local', 'username': 'aneeshaparajit', 'executable': '/opt/homebrew/opt/python@3.10/bin/python3.10', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'total': 926.3517189025879, 'used': 10.888084411621094}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-02-07 20:35:56,502 INFO    HandlerThread:61549 [system_monitor.py:probe():182] Finished collecting system info
+2023-02-07 20:35:56,502 INFO    HandlerThread:61549 [system_monitor.py:probe():185] Publishing system info
+2023-02-07 20:35:56,502 DEBUG   HandlerThread:61549 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-02-07 20:35:56,502 DEBUG   HandlerThread:61549 [system_info.py:_save_pip():67] Saving pip packages done
+2023-02-07 20:35:56,503 INFO    HandlerThread:61549 [system_monitor.py:probe():187] Finished publishing system info
+2023-02-07 20:35:56,509 DEBUG   SenderThread:61549 [sender.py:send():334] send: files
+2023-02-07 20:35:56,509 INFO    SenderThread:61549 [sender.py:_save_file():1319] saving file wandb-metadata.json with policy now
+2023-02-07 20:35:56,514 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: stop_status
+2023-02-07 20:35:56,514 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: stop_status
+2023-02-07 20:35:56,793 DEBUG   SenderThread:61549 [sender.py:send():334] send: telemetry
+2023-02-07 20:35:56,794 DEBUG   SenderThread:61549 [sender.py:send():334] send: exit
+2023-02-07 20:35:56,794 INFO    SenderThread:61549 [sender.py:send_exit():557] handling exit code: 1
+2023-02-07 20:35:56,794 INFO    SenderThread:61549 [sender.py:send_exit():559] handling runtime: 0
+2023-02-07 20:35:56,794 INFO    SenderThread:61549 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-02-07 20:35:56,794 INFO    SenderThread:61549 [sender.py:send_exit():565] send defer
+2023-02-07 20:35:56,795 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:56,795 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 0
+2023-02-07 20:35:56,795 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:56,795 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 0
+2023-02-07 20:35:56,795 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 1
+2023-02-07 20:35:56,795 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:56,795 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 1
+2023-02-07 20:35:56,795 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:56,795 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 1
+2023-02-07 20:35:56,795 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 2
+2023-02-07 20:35:56,795 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:56,795 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 2
+2023-02-07 20:35:56,795 INFO    HandlerThread:61549 [system_monitor.py:finish():161] Stopping system monitor
+2023-02-07 20:35:56,817 DEBUG   SystemMonitor:61549 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-02-07 20:35:56,817 DEBUG   SystemMonitor:61549 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-02-07 20:35:56,817 DEBUG   SystemMonitor:61549 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-02-07 20:35:56,817 INFO    HandlerThread:61549 [interfaces.py:finish():175] Joined cpu
+2023-02-07 20:35:56,817 INFO    HandlerThread:61549 [interfaces.py:finish():175] Joined disk
+2023-02-07 20:35:57,007 INFO    HandlerThread:61549 [interfaces.py:finish():175] Joined gpuapple
+2023-02-07 20:35:57,007 INFO    HandlerThread:61549 [interfaces.py:finish():175] Joined memory
+2023-02-07 20:35:57,007 INFO    HandlerThread:61549 [interfaces.py:finish():175] Joined network
+2023-02-07 20:35:57,008 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:57,008 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 2
+2023-02-07 20:35:57,008 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 3
+2023-02-07 20:35:57,008 DEBUG   SenderThread:61549 [sender.py:send():334] send: telemetry
+2023-02-07 20:35:57,008 DEBUG   SenderThread:61549 [sender.py:send():334] send: stats
+2023-02-07 20:35:57,008 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:57,008 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 3
+2023-02-07 20:35:57,008 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:57,008 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 3
+2023-02-07 20:35:57,008 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 4
+2023-02-07 20:35:57,008 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:57,008 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 4
+2023-02-07 20:35:57,008 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:57,008 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 4
+2023-02-07 20:35:57,008 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 5
+2023-02-07 20:35:57,008 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:57,008 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 5
+2023-02-07 20:35:57,009 DEBUG   SenderThread:61549 [sender.py:send():334] send: summary
+2023-02-07 20:35:57,009 INFO    SenderThread:61549 [sender.py:_save_file():1319] saving file wandb-summary.json with policy end
+2023-02-07 20:35:57,009 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:57,009 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 5
+2023-02-07 20:35:57,009 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 6
+2023-02-07 20:35:57,009 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:57,009 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 6
+2023-02-07 20:35:57,009 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:57,009 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 6
+2023-02-07 20:35:57,011 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: status_report
+2023-02-07 20:35:57,328 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/wandb-summary.json
+2023-02-07 20:35:57,328 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/output.log
+2023-02-07 20:35:57,329 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/wandb-metadata.json
+2023-02-07 20:35:57,329 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/requirements.txt
+2023-02-07 20:35:57,330 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 7
+2023-02-07 20:35:57,331 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:57,331 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 7
+2023-02-07 20:35:57,331 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:57,331 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 7
+2023-02-07 20:35:57,365 INFO    Thread-16 :61549 [upload_job.py:push():143] Uploaded file /var/folders/9c/hg99j16578569gfzb3w5bzdh0000gn/T/tmpzf870_9uwandb/2rzzqdxv-wandb-metadata.json
+2023-02-07 20:35:57,612 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-07 20:35:58,334 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/config.yaml
+2023-02-07 20:35:58,804 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 8
+2023-02-07 20:35:58,805 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: poll_exit
+2023-02-07 20:35:58,805 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:58,805 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 8
+2023-02-07 20:35:58,806 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:35:58,806 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 8
+2023-02-07 20:35:58,814 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 9
+2023-02-07 20:35:58,815 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:35:58,815 DEBUG   SenderThread:61549 [sender.py:send():334] send: artifact
+2023-02-07 20:35:58,815 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 9
+2023-02-07 20:35:59,335 INFO    Thread-13 :61549 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/output.log
+2023-02-07 20:36:00,726 INFO    SenderThread:61549 [sender.py:send_artifact():1415] sent artifact job-https___github.com_aneesh-aparajit_dqn-atari.git_agent.py - {'id': 'QXJ0aWZhY3Q6MzU3NzQzMzQ0', 'digest': '94aeb248e758b474748af6d37859d6a9', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_aneesh-aparajit_dqn-atari.git_agent.py', 'alias': 'v7'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjUyMTczMDQw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MzU3NzQzMzQ0', 'versionIndex': 7}}, 'version': 'v7'}
+2023-02-07 20:36:00,727 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:36:00,727 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 9
+2023-02-07 20:36:00,727 INFO    SenderThread:61549 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-02-07 20:36:01,347 INFO    SenderThread:61549 [dir_watcher.py:finish():392] scan: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files
+2023-02-07 20:36:01,347 INFO    SenderThread:61549 [dir_watcher.py:finish():406] scan save: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/requirements.txt requirements.txt
+2023-02-07 20:36:01,348 INFO    SenderThread:61549 [dir_watcher.py:finish():406] scan save: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/output.log output.log
+2023-02-07 20:36:01,352 INFO    SenderThread:61549 [dir_watcher.py:finish():406] scan save: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/config.yaml config.yaml
+2023-02-07 20:36:01,354 INFO    SenderThread:61549 [dir_watcher.py:finish():406] scan save: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/wandb-summary.json wandb-summary.json
+2023-02-07 20:36:01,358 INFO    SenderThread:61549 [dir_watcher.py:finish():406] scan save: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/wandb-metadata.json wandb-metadata.json
+2023-02-07 20:36:01,359 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 10
+2023-02-07 20:36:01,361 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:36:01,361 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 10
+2023-02-07 20:36:01,362 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:36:01,362 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 10
+2023-02-07 20:36:01,362 INFO    SenderThread:61549 [file_pusher.py:finish():160] shutting down file pusher
+2023-02-07 20:36:02,294 INFO    Thread-20 :61549 [upload_job.py:push():143] Uploaded file /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/wandb-summary.json
+2023-02-07 20:36:02,337 INFO    Thread-17 :61549 [upload_job.py:push():143] Uploaded file /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/requirements.txt
+2023-02-07 20:36:02,370 INFO    Thread-19 :61549 [upload_job.py:push():143] Uploaded file /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/config.yaml
+2023-02-07 20:36:02,371 INFO    Thread-18 :61549 [upload_job.py:push():143] Uploaded file /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/files/output.log
+2023-02-07 20:36:02,573 INFO    Thread-12 (_thread_body):61549 [sender.py:transition_state():585] send defer: 11
+2023-02-07 20:36:02,573 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:36:02,573 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 11
+2023-02-07 20:36:02,574 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:36:02,574 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 11
+2023-02-07 20:36:02,574 INFO    SenderThread:61549 [file_pusher.py:join():165] waiting for file pusher
+2023-02-07 20:36:02,574 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 12
+2023-02-07 20:36:02,574 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:36:02,574 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 12
+2023-02-07 20:36:02,574 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:36:02,574 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 12
+2023-02-07 20:36:02,637 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: keepalive
+2023-02-07 20:36:02,974 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 13
+2023-02-07 20:36:02,975 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:36:02,975 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 13
+2023-02-07 20:36:02,976 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:36:02,976 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 13
+2023-02-07 20:36:02,977 INFO    SenderThread:61549 [sender.py:transition_state():585] send defer: 14
+2023-02-07 20:36:02,978 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: defer
+2023-02-07 20:36:02,978 DEBUG   SenderThread:61549 [sender.py:send():334] send: final
+2023-02-07 20:36:02,978 INFO    HandlerThread:61549 [handler.py:handle_request_defer():170] handle defer: 14
+2023-02-07 20:36:02,978 DEBUG   SenderThread:61549 [sender.py:send():334] send: footer
+2023-02-07 20:36:02,979 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: defer
+2023-02-07 20:36:02,979 INFO    SenderThread:61549 [sender.py:send_request_defer():581] handle sender defer: 14
+2023-02-07 20:36:02,980 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: poll_exit
+2023-02-07 20:36:02,981 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: poll_exit
+2023-02-07 20:36:02,982 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: server_info
+2023-02-07 20:36:02,982 DEBUG   SenderThread:61549 [sender.py:send_request():361] send_request: server_info
+2023-02-07 20:36:02,983 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: get_summary
+2023-02-07 20:36:02,986 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: sampled_history
+2023-02-07 20:36:03,392 INFO    MainThread:61549 [wandb_run.py:_footer_history_summary_info():3427] rendering history
+2023-02-07 20:36:03,392 INFO    MainThread:61549 [wandb_run.py:_footer_history_summary_info():3459] rendering summary
+2023-02-07 20:36:03,392 INFO    MainThread:61549 [wandb_run.py:_footer_sync_info():3383] logging synced files
+2023-02-07 20:36:03,393 DEBUG   HandlerThread:61549 [handler.py:handle_request():144] handle_request: shutdown
+2023-02-07 20:36:03,394 INFO    HandlerThread:61549 [handler.py:finish():841] shutting down handler
+2023-02-07 20:36:03,984 INFO    WriterThread:61549 [datastore.py:close():299] close: /Users/aneeshaparajit/Desktop/new workspace/dqn-atari/wandb/run-20230207_203554-58wqme46/run-58wqme46.wandb
+2023-02-07 20:36:04,394 INFO    SenderThread:61549 [sender.py:finish():1491] shutting down sender
+2023-02-07 20:36:04,395 INFO    SenderThread:61549 [file_pusher.py:finish():160] shutting down file pusher
+2023-02-07 20:36:04,395 INFO    SenderThread:61549 [file_pusher.py:join():165] waiting for file pusher

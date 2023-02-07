@@ -1,0 +1,34 @@
+{
+    "os": "macOS-13.0-arm64-arm-64bit",
+    "python": "3.10.9",
+    "heartbeatAt": "2023-02-07T15:08:28.173208",
+    "startedAt": "2023-02-07T15:08:26.427775",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari/agent.py",
+    "codePath": "agent.py",
+    "git": {
+        "remote": "https://github.com/aneesh-aparajit/dqn-atari.git",
+        "commit": "9f3e6113c746f2a53e50e9261ca2f73f168fefd8"
+    },
+    "email": "aneeshaparajit.g2002@gmail.com",
+    "root": "/Users/aneeshaparajit/Desktop/new workspace/dqn-atari",
+    "host": "Aneesh.local",
+    "username": "aneeshaparajit",
+    "executable": "/opt/homebrew/opt/python@3.10/bin/python3.10",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "total": 926.3517189025879,
+        "used": 10.888084411621094
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}
